@@ -10,8 +10,6 @@ from flask import (
     url_for
 )
 
-from dataclasses import dataclass
-
 class User:
     def __init__(self, id, username, password):
         self.id = id
