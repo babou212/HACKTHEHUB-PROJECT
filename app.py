@@ -10,6 +10,8 @@ from flask import (
     url_for
 )
 
+from dataclasses import dataclass
+
 class User:
     def __init__(self, id, username, password):
         self.id = id
@@ -23,7 +25,6 @@ users = []
 users.append(User(id=1, username='Anthony', password='password'))
 users.append(User(id=2, username='Becca', password='secret'))
 users.append(User(id=3, username='Carlos', password='somethingsimple'))
-
 
 app = Flask(__name__)
 app.secret_key = 'somesecretkeythatonlyishouldknow'
